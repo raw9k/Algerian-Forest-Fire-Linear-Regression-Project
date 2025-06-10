@@ -82,7 +82,25 @@
             <input type="text" name="Region" placeholder="Region (1 = Bejaia, 2 = Sidi-Bel Abbes)" required>
             <button type="submit">🔍 Predict Fire Index</button>
         </form>
-
+        <a href="{{ url_for('index') }}" style="text-decoration: none;">
+            <button type="button" style="
+                width: 100%;
+                padding: 12px;
+                background-color: #2b6cb0;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 1em;
+                cursor: pointer;
+                margin: 24px 0 10px 0;
+                transition: background 0.2s;
+            " 
+            onmouseover="this.style.backgroundColor='#2c5282';"
+            onmouseout="this.style.backgroundColor='#2b6cb0';"
+            >
+                Go to Home
+            </button>
+        </a>
         {% if result %}
         <h2>🔥 Predicted FWI: {{ result }}</h2>
         {% endif %}
